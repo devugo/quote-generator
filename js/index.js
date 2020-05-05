@@ -1,0 +1,28 @@
+$(document).ready(function(){
+  
+  var randomNumber;
+  var randomQuote;
+  var randomAuthor;
+  
+  function newQuote() {
+    var quote = ["In the end, we are left infinitely and utterly alone", "The line between what brings us pain and what sustains us is thinner than you'd imagine", "Some old wounds never truly heal, and bleed again at the slightest word", "Never forget what you are, for surely the world will not. Armour yourself in it, and it will never be used to hurt you.", "The things we love destroy us every time, lad. Remember that.", "Death is so terribly final, while life is full of possibilities", "Nothing burns like the cold", "I swear to you, sitting on a throne is a thousand times harder than winning one", "Why is it always the innocents who suffer most, when you high lords play your game of thrones?", "Everything's better with some wine in the belly", "If you don't like the hand that fate's dealt you, fight for a new one", "A smile is the best way to get away with trouble even if it’s a fake one", "When a man learns to love, he must bear the risk of hatred.", "I've told you before. You shouldn't judge people based on appearances and your preconceptions.", "Justice comes from vengeance but that justice only breeds more vengeance", "Sometimes you must hurt in order to know, fall in order to grow, lose in order to gain, because life’s greatest lessons are learnt through pain.", "Religion, ideology, resources, land, or love. No matter how pathetic the reason, it's enough to start a war", "There's no advantage to hurrying through life", "You Focus on the Trivial, and lose sight of what is most important, Change is impossible in this fog of ignorance. How can we Evolve when Regulation is all we know?", "Knowledge and awareness are vague, and perhaps better called illusions. Everyone lives within their own subjective interpretation.", "Not everyone can be a great artist but a great artist can come from anywhere", "There is excellence around you, you only need to stop and savor it", "If you focus on what you left behind, you will never be able to see what lies ahead", "The only thing predictable about life is its unpredictability", "You must not let anyone define your limits because where you come from, your limit is your soul", "If only you know how quickly people forget the dead, you'd stop living your life to impress people", "No single thing is perfect by itself. That's why we're born to attract other things to make up for what we lack. I think we start walking in the right direction only after we start getting our counterparts beside us", "If you don't like your destiny, don't accept it. Instead, have the courage to change it the way you want it to be", "We have to live a life of no regrets", "If you believe in your dreams, i will prove to you that you can achieve your dreams just by working hard", "Tears are how our heart speaks when our lips cannot describe how much we've been hurt", "What is right? What is wrong? In this mixed up world, deciding what is right and wrong is not easy. You can't just go by somebody else's rules. If you let yourself be controlled like that, you'll just become a puppet that can't make decisions on it's own. You have to live by your rules", "In this world, wherever there is light, there are also shadows. As long as the concept of winners exists, there must also be losers. The selfish desire of wanting to maintain peace causes wars and hatred is born to protect love", "It's stupid to talk about things you're not. Be yourself and you'll be fine", "You'll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It's the people close to your heart that can give you the most piercing wound. Love is a double-edge sword, it can heal the wound faster or it can sink the blade even deeper", "Time flows constantly, it doesn't care about the people who are struggling. The world cannot be changed with pretty words alone", "It's foolish to fear what we've yet to see or know", "I thought life is unfair, until somebody said: Life is fair because it's unfair to everybody", "Hell is empty and all the devils are here", "Money is numbers and numbers never end. If it takes money to be happy, your search for happiness will never end", "Be your own cup of tea. Fill your own love tank", "I hope you find the person who wants to find you", "If only love was a currency and the whole world was wealthy", "All the gods, all the heavens, all the hells are within you"];
+    var author =[" - Klaus", " - Klaus", " - GOT", " - Tyrion Lannister", " - GOT", " - GOT", " - GOT", " - GOT", " - GOT", " - GOT", " - Naruto", " - Naruto", " - Naruto", " - Uchiha Itachi", " - Nagato Pain", " - Nagato Pain", " - Nagato Pain", " - Shikamaru", " - Nagato Pain", " - Uchiha Itachi", " - Ratatouille", " - Ratatouille", " - Ratatouille", " - Ratatouille", " - Ratatouille", " - Lucy", " - Uchiha Itachi", " - Naruto", " - Portgas Ace", " - Rock Lee", " - Jellal Fernandez", " - Gintoki Sakata", " - Uchiha Madara", " - Shikamaru", " - Kenshin Himura", " - Lelouch Lamperouge", " - Uchiha Itachi", " - The Good Quote", " - William Shakespeare", " - Bob Marley", " - Pierre Jeanty", " - R.H, Sin", " - Ed Sheeran", " - Unknown"];
+    
+    randomNumber = Math.floor((Math.random()*quote.length));
+    randomQuote = quote[randomNumber];
+    randomAuthor = author[randomNumber];
+    
+    $(".quote").text(randomQuote);
+    $(".author").text(randomAuthor); 
+  };
+  
+  $("#newQuote").on("click", function(){
+    newQuote();
+  });
+  
+ $("#tweet").on("click", function(){
+   window.open("https://twitter.com/intent/tweet?text="+randomQuote + " " +randomAuthor);
+ });
+  
+  
+});
